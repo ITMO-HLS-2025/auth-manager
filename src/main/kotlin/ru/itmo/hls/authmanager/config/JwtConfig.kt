@@ -1,0 +1,15 @@
+package ru.itmo.hls.authmanager.config
+
+import org.springframework.boot.context.properties.ConfigurationProperties
+import org.springframework.boot.context.properties.EnableConfigurationProperties
+import org.springframework.context.annotation.Configuration
+
+@Configuration
+@EnableConfigurationProperties(JwtProperties::class)
+class JwtConfig
+
+@ConfigurationProperties(prefix = "auth.jwt")
+data class JwtProperties(
+    var secret: String = "",
+    var ttlSeconds: Long = 3600
+)
