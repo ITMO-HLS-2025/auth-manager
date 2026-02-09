@@ -1,7 +1,7 @@
 package ru.itmo.hls.authmanager
 
 import org.springframework.test.context.TestPropertySource
-import ru.itmo.hls.authmanager.service.PostgresContainerConfig
+import ru.itmo.hls.authmanager.testconfig.PostgresContainerConfig
 
 @TestPropertySource(
     properties = [
