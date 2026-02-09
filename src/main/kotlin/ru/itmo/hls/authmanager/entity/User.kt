@@ -27,7 +27,13 @@ class User(
     var role: UserRole = UserRole.CUSTOMER,
 
     @Column(name = "theatre_id")
-    var theatreId: Long? = null
+    var theatreId: Long? = null,
+
+    @Column(name = "verified", nullable = false)
+    var verified: Boolean = false,
+
+    @Column(name = "verified_at")
+    var verifiedAt: java.time.LocalDateTime? = null
 ) {
-    constructor() : this(0, "", "", UserRole.CUSTOMER, null)
+    constructor() : this(0, "", "", UserRole.CUSTOMER, null, false, null)
 }
